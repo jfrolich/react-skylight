@@ -35,7 +35,7 @@ export default class SkyLightStateless extends React.Component {
     }
 
     return isVisible ? (
-        <section className="skylight-wrapper">
+        <section className="skylight-wrapper" style={this.props.wrapperStyles}>
             {overlay}
             <div className="skylight-dialog" style={dialogStyles}>
               <a role="button" className="skylight-close-button"
@@ -57,6 +57,7 @@ SkyLightStateless.displayName = 'SkyLightStateless';
 SkyLightStateless.sharedPropTypes = {
   closeButtonStyle: React.PropTypes.object,
   dialogStyles: React.PropTypes.object,
+  wrapperStyles: React.PropTypes.object,
   onCloseClicked: React.PropTypes.func,
   onOverlayClicked: React.PropTypes.func,
   overlayStyles: React.PropTypes.object,
